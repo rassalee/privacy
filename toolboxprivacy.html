@@ -1,110 +1,732 @@
-KEBIJAKAN PRIVASI TOOLBOX SUPER
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
 
-Terakhir diperbarui: 18 Septenber 2026
+    <title>Kebijakan Privasi - Toolbox Super</title>
 
-Toolbox Super menghargai privasi setiap pengguna. Kebijakan Privasi ini menjelaskan bagaimana informasi dapat dikumpulkan, digunakan, disimpan, dan dilindungi ketika Anda menggunakan aplikasi Toolbox Super.
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-Dengan menggunakan Toolbox Super, Anda memahami praktik yang dijelaskan dalam Kebijakan Privasi ini.
+        html {
+            scroll-behavior: smooth;
+        }
 
-1. INFORMASI YANG DAPAT DIKUMPULKAN
+        body {
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+                         "Segoe UI", Roboto, Arial, sans-serif;
+            background:
+                radial-gradient(circle at top right, rgba(79,124,255,.13), transparent 30%),
+                radial-gradient(circle at top left, rgba(39,211,194,.08), transparent 25%),
+                #0b1020;
+            color: #f5f7ff;
+            line-height: 1.75;
+        }
 
-Toolbox Super dapat memproses atau mengumpulkan informasi tertentu sesuai dengan fitur yang digunakan, antara lain:
+        a {
+            color: #65a0ff;
+            text-decoration: none;
+        }
 
-• Informasi akun, seperti nama, alamat email, foto profil, atau pengenal akun apabila pengguna memilih untuk membuat atau masuk ke akun.
-• Informasi perangkat dan aplikasi yang diperlukan untuk menjalankan fitur tertentu.
-• Informasi jaringan, seperti alamat IP, informasi koneksi, DNS, gateway, Wi-Fi, atau informasi jaringan lainnya yang diperlukan ketika menggunakan Network Tools.
-• File, gambar, dokumen, atau konten lain yang dipilih sendiri oleh pengguna ketika menggunakan File Tools, Image Tools, Document Tools, Converter, atau fitur terkait.
-• Informasi penggunaan aplikasi, seperti fitur yang digunakan, error, crash, dan informasi diagnostik apabila layanan analitik atau crash reporting digunakan.
-• File dan metadata yang secara sengaja disimpan pengguna pada Toolbox Drive apabila layanan tersebut tersedia.
+        a:hover {
+            text-decoration: underline;
+        }
 
-Toolbox Super tidak akan dengan sengaja mengakses file atau informasi pribadi yang tidak diperlukan oleh fitur yang sedang digunakan.
+        /* HEADER */
 
-2. IZIN PERANGKAT
+        .header {
+            padding: 70px 20px 55px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,.07);
+        }
 
-Beberapa fitur Toolbox Super mungkin membutuhkan izin Android tertentu, seperti:
+        .logo {
+            width: 76px;
+            height: 76px;
+            margin: 0 auto 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            padding: 13px;
+            border-radius: 22px;
+            background: #141b2d;
+            box-shadow:
+                0 15px 40px rgba(0,0,0,.35),
+                inset 0 0 0 1px rgba(255,255,255,.05);
+        }
 
-• Kamera — untuk scanner, QR/barcode, atau fitur berbasis kamera.
-• Foto, video, atau file — untuk membuka, membuat, mengonversi, dan menyimpan file yang dipilih pengguna.
-• Jaringan dan internet — untuk Network Tools dan layanan online.
-• Notifikasi — untuk memberikan pemberitahuan tertentu.
-• Lokasi — hanya apabila diperlukan oleh fitur Android tertentu, termasuk informasi Wi-Fi yang pada versi Android tertentu dilindungi oleh izin lokasi.
+        .logo span {
+            border-radius: 7px;
+        }
 
-Izin hanya diminta ketika diperlukan oleh fitur terkait, sejauh memungkinkan.
-Pengguna dapat mengubah izin aplikasi melalui pengaturan Android.
+        .logo span:nth-child(1) {
+            background: linear-gradient(135deg, #2a8cff, #37d6ff);
+        }
 
-3. PEMROSESAN FILE
+        .logo span:nth-child(2) {
+            background: linear-gradient(135deg, #855cff, #d25cff);
+        }
 
-Beberapa fitur Toolbox Super dapat memproses file secara lokal pada perangkat.
-Apabila sebuah fitur bekerja sepenuhnya secara lokal, file tidak perlu dikirim ke server Toolbox Super.
-Untuk fitur yang membutuhkan layanan cloud atau server, aplikasi dapat mengirim data yang diperlukan untuk menjalankan fitur tersebut. Apabila pemrosesan cloud digunakan, pengguna akan diberi informasi yang sesuai apabila diperlukan.
+        .logo span:nth-child(3) {
+            background: linear-gradient(135deg, #24c996, #48e2bb);
+        }
 
-4. TOOLBOX DRIVE
+        .logo span:nth-child(4) {
+            background: linear-gradient(135deg, #ff9d3d, #ffd24d);
+        }
 
-Jika pengguna memilih menggunakan Toolbox Drive, file yang dipilih untuk disimpan ke Toolbox Drive dapat diunggah dan disimpan pada layanan penyimpanan cloud yang digunakan Toolbox Super.
-File tidak akan dimasukkan ke Toolbox Drive hanya karena file tersebut terdapat pada perangkat pengguna. Pengunggahan dilakukan melalui tindakan atau fitur yang dipilih pengguna.
-Pengguna bertanggung jawab atas file dan konten yang disimpan pada akun Toolbox Drive miliknya.
+        .app-name {
+            color: #7ca6ff;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
 
-5. NETWORK TOOLS
+        h1 {
+            font-size: clamp(30px, 6vw, 46px);
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
 
-Toolbox Super menyediakan berbagai alat diagnostik jaringan seperti network scanner, port scanner, ping, DNS lookup, dan alat jaringan lainnya.
-Untuk menjalankan fitur tersebut, aplikasi dapat memproses alamat IP, hostname, port, informasi perangkat jaringan, dan informasi teknis lainnya.
-Informasi tersebut digunakan untuk menjalankan fungsi yang diminta pengguna.
-Pengguna bertanggung jawab untuk menggunakan Network Tools hanya pada perangkat, sistem, atau jaringan yang dimiliki atau yang telah memberikan izin untuk diperiksa.
+        .updated {
+            color: #929bb0;
+            font-size: 14px;
+        }
 
-6. PENGGUNAAN INFORMASI
+        /* CONTENT */
 
-Informasi yang diproses atau dikumpulkan dapat digunakan untuk:
+        .container {
+            width: min(900px, calc(100% - 32px));
+            margin: 45px auto 80px;
+        }
 
-• Menyediakan fungsi aplikasi.
-• Menyimpan dan mengelola akun pengguna.
-• Menjalankan Toolbox Drive.
-• Menyimpan preferensi aplikasi.
-• Memperbaiki bug dan meningkatkan performa.
-• Menjaga keamanan layanan.
-• Mencegah penyalahgunaan.
-• Memberikan dukungan kepada pengguna.
-• Memenuhi kewajiban hukum yang berlaku.
+        .intro {
+            padding: 26px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(79,124,255,.18);
+            border-radius: 18px;
+            background: linear-gradient(
+                135deg,
+                rgba(79,124,255,.10),
+                rgba(39,211,194,.04)
+            );
+            color: #dce3f3;
+        }
 
-7. BERBAGI DATA
+        /* TABLE OF CONTENTS */
 
-Toolbox Super tidak menjual informasi pribadi pengguna.
-Data tertentu dapat diproses oleh penyedia layanan pihak ketiga yang diperlukan untuk menjalankan aplikasi, misalnya:
-• Penyedia hosting atau cloud storage.
-• Sistem autentikasi.
-• Layanan analitik dan crash reporting.
-• Infrastruktur jaringan.
-• Layanan lain yang secara jelas digunakan oleh fitur tertentu.
+        .toc {
+            background: #11182a;
+            border: 1px solid rgba(255,255,255,.07);
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
 
-Penggunaan layanan pihak ketiga dapat tunduk pada kebijakan privasi masing-masing penyedia.
+        .toc h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
 
-8. KEAMANAN DATA
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 9px 20px;
+        }
 
-Kami berupaya menggunakan langkah teknis dan organisasi yang wajar untuk melindungi data pengguna.
-Namun, tidak ada sistem elektronik, jaringan, atau penyimpanan online yang dapat dijamin 100% aman.
-Pengguna juga bertanggung jawab menjaga keamanan perangkat dan informasi akun miliknya.
+        .toc a {
+            color: #aeb8cc;
+            padding: 4px 0;
+            font-size: 14px;
+        }
 
-9. PENYIMPANAN DAN PENGHAPUSAN DATA
+        .toc a:hover {
+            color: #6fa5ff;
+        }
 
-Data disimpan selama diperlukan untuk menyediakan layanan atau memenuhi kewajiban yang berlaku.
-Jika fitur akun tersedia, pengguna dapat diberikan pilihan untuk menghapus akun dan data terkait sesuai dengan fungsi yang tersedia dan ketentuan yang berlaku.
-File lokal yang dibuat menggunakan Toolbox Super tetap berada pada perangkat atau lokasi penyimpanan yang dipilih pengguna sampai pengguna menghapusnya.
+        /* SECTIONS */
 
-10. PRIVASI ANAK
+        .section {
+            background: rgba(20,27,45,.78);
+            border: 1px solid rgba(255,255,255,.065);
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 12px 30px rgba(0,0,0,.12);
+        }
 
-Toolbox Super tidak dimaksudkan untuk secara sengaja mengumpulkan informasi pribadi anak di bawah usia minimum yang ditentukan oleh hukum yang berlaku tanpa dasar atau persetujuan yang diperlukan.
+        .section h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-11. TAUTAN DAN LAYANAN PIHAK KETIGA
+        .number {
+            min-width: 35px;
+            height: 35px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: rgba(79,124,255,.13);
+            color: #76a2ff;
+            font-size: 14px;
+            font-weight: 700;
+        }
 
-Toolbox Super dapat berinteraksi dengan situs web, server, API, atau layanan pihak ketiga.
-Kami tidak mengendalikan praktik privasi layanan pihak ketiga tersebut.
+        p {
+            color: #b9c2d3;
+            margin-bottom: 14px;
+        }
 
-12. PERUBAHAN KEBIJAKAN PRIVASI
+        p:last-child {
+            margin-bottom: 0;
+        }
 
-Kebijakan Privasi ini dapat diperbarui untuk menyesuaikan perubahan fitur, teknologi, peraturan, atau layanan Toolbox Super.
-Tanggal pembaruan terbaru akan ditampilkan pada bagian atas kebijakan ini.
+        ul {
+            list-style: none;
+            margin: 14px 0 18px;
+        }
 
-13. HUBUNGI KAMI
+        li {
+            position: relative;
+            padding: 6px 0 6px 25px;
+            color: #b9c2d3;
+        }
 
-Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi Toolbox Super, hubungi:
-Pengembang: Rangga Adi saputra
-Email: admobtodan@gmail.com
+        li::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            position: absolute;
+            left: 4px;
+            top: 16px;
+            background: linear-gradient(135deg, #4f7cff, #27d3c2);
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(79,124,255,.15),
+                    rgba(39,211,194,.08)
+                );
+        }
+
+        .contact-box {
+            margin-top: 18px;
+            padding: 18px 20px;
+            border-radius: 14px;
+            background: rgba(5,10,22,.38);
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 10px;
+            margin: 7px 0;
+            color: #b9c2d3;
+        }
+
+        .contact-label {
+            min-width: 100px;
+            color: #7f899e;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            border-top: 1px solid rgba(255,255,255,.06);
+            color: #707a90;
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: #aeb8cc;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+            .header {
+                padding: 48px 18px 38px;
+            }
+
+            .container {
+                width: min(100% - 22px, 900px);
+                margin-top: 25px;
+            }
+
+            .section,
+            .intro,
+            .toc {
+                padding: 20px;
+                border-radius: 15px;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section h2 {
+                align-items: flex-start;
+                font-size: 18px;
+            }
+
+            .contact-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo" aria-label="Toolbox Super">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="app-name">Toolbox Super</div>
+
+    <h1>Kebijakan Privasi</h1>
+
+    <div class="updated">
+        Terakhir diperbarui: 18 September 2026
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <div class="intro">
+        <p>
+            <strong>Toolbox Super</strong> menghargai privasi setiap pengguna.
+            Kebijakan Privasi ini menjelaskan bagaimana informasi dapat
+            dikumpulkan, digunakan, disimpan, dan dilindungi ketika Anda
+            menggunakan aplikasi Toolbox Super.
+        </p>
+
+        <p>
+            Dengan menggunakan Toolbox Super, Anda memahami praktik yang
+            dijelaskan dalam Kebijakan Privasi ini.
+        </p>
+    </div>
+
+
+    <div class="toc">
+        <h2>Daftar Isi</h2>
+
+        <div class="toc-grid">
+            <a href="#informasi">1. Informasi yang Dapat Dikumpulkan</a>
+            <a href="#izin">2. Izin Perangkat</a>
+            <a href="#file">3. Pemrosesan File</a>
+            <a href="#drive">4. Toolbox Drive</a>
+            <a href="#network">5. Network Tools</a>
+            <a href="#penggunaan">6. Penggunaan Informasi</a>
+            <a href="#berbagi">7. Berbagi Data</a>
+            <a href="#keamanan">8. Keamanan Data</a>
+            <a href="#penyimpanan">9. Penyimpanan dan Penghapusan</a>
+            <a href="#anak">10. Privasi Anak</a>
+            <a href="#pihak-ketiga">11. Layanan Pihak Ketiga</a>
+            <a href="#perubahan">12. Perubahan Kebijakan</a>
+            <a href="#kontak">13. Hubungi Kami</a>
+        </div>
+    </div>
+
+
+    <section class="section" id="informasi">
+        <h2>
+            <span class="number">1</span>
+            Informasi yang Dapat Dikumpulkan
+        </h2>
+
+        <p>
+            Toolbox Super dapat memproses atau mengumpulkan informasi tertentu
+            sesuai dengan fitur yang digunakan, antara lain:
+        </p>
+
+        <ul>
+            <li>
+                Informasi akun, seperti nama, alamat email, foto profil, atau
+                pengenal akun apabila pengguna memilih untuk membuat atau
+                masuk ke akun.
+            </li>
+
+            <li>
+                Informasi perangkat dan aplikasi yang diperlukan untuk
+                menjalankan fitur tertentu.
+            </li>
+
+            <li>
+                Informasi jaringan, seperti alamat IP, informasi koneksi,
+                DNS, gateway, Wi-Fi, atau informasi jaringan lainnya yang
+                diperlukan ketika menggunakan Network Tools.
+            </li>
+
+            <li>
+                File, gambar, dokumen, atau konten lain yang dipilih sendiri
+                oleh pengguna ketika menggunakan File Tools, Image Tools,
+                Document Tools, Converter, atau fitur terkait.
+            </li>
+
+            <li>
+                Informasi penggunaan aplikasi, seperti fitur yang digunakan,
+                error, crash, dan informasi diagnostik apabila layanan
+                analitik atau crash reporting digunakan.
+            </li>
+
+            <li>
+                File dan metadata yang secara sengaja disimpan pengguna pada
+                Toolbox Drive apabila layanan tersebut tersedia.
+            </li>
+        </ul>
+
+        <p>
+            Toolbox Super tidak akan dengan sengaja mengakses file atau
+            informasi pribadi yang tidak diperlukan oleh fitur yang sedang
+            digunakan.
+        </p>
+    </section>
+
+
+    <section class="section" id="izin">
+        <h2>
+            <span class="number">2</span>
+            Izin Perangkat
+        </h2>
+
+        <p>
+            Beberapa fitur Toolbox Super mungkin membutuhkan izin Android
+            tertentu, seperti:
+        </p>
+
+        <ul>
+            <li>
+                <strong>Kamera</strong> — untuk scanner, QR/barcode,
+                atau fitur berbasis kamera.
+            </li>
+
+            <li>
+                <strong>Foto, video, atau file</strong> — untuk membuka,
+                membuat, mengonversi, dan menyimpan file yang dipilih pengguna.
+            </li>
+
+            <li>
+                <strong>Jaringan dan internet</strong> — untuk Network Tools
+                dan layanan online.
+            </li>
+
+            <li>
+                <strong>Notifikasi</strong> — untuk memberikan pemberitahuan
+                tertentu.
+            </li>
+
+            <li>
+                <strong>Lokasi</strong> — hanya apabila diperlukan oleh fitur
+                Android tertentu, termasuk informasi Wi-Fi yang pada versi
+                Android tertentu dilindungi oleh izin lokasi.
+            </li>
+        </ul>
+
+        <p>
+            Izin hanya diminta ketika diperlukan oleh fitur terkait, sejauh
+            memungkinkan. Pengguna dapat mengubah izin aplikasi melalui
+            pengaturan Android.
+        </p>
+    </section>
+
+
+    <section class="section" id="file">
+        <h2>
+            <span class="number">3</span>
+            Pemrosesan File
+        </h2>
+
+        <p>
+            Beberapa fitur Toolbox Super dapat memproses file secara lokal
+            pada perangkat.
+        </p>
+
+        <p>
+            Apabila sebuah fitur bekerja sepenuhnya secara lokal, file tidak
+            perlu dikirim ke server Toolbox Super.
+        </p>
+
+        <p>
+            Untuk fitur yang membutuhkan layanan cloud atau server, aplikasi
+            dapat mengirim data yang diperlukan untuk menjalankan fitur
+            tersebut. Apabila pemrosesan cloud digunakan, pengguna akan
+            diberi informasi yang sesuai apabila diperlukan.
+        </p>
+    </section>
+
+
+    <section class="section" id="drive">
+        <h2>
+            <span class="number">4</span>
+            Toolbox Drive
+        </h2>
+
+        <p>
+            Jika pengguna memilih menggunakan Toolbox Drive, file yang dipilih
+            untuk disimpan ke Toolbox Drive dapat diunggah dan disimpan pada
+            layanan penyimpanan cloud yang digunakan Toolbox Super.
+        </p>
+
+        <p>
+            File tidak akan dimasukkan ke Toolbox Drive hanya karena file
+            tersebut terdapat pada perangkat pengguna. Pengunggahan dilakukan
+            melalui tindakan atau fitur yang dipilih pengguna.
+        </p>
+
+        <p>
+            Pengguna bertanggung jawab atas file dan konten yang disimpan pada
+            akun Toolbox Drive miliknya.
+        </p>
+    </section>
+
+
+    <section class="section" id="network">
+        <h2>
+            <span class="number">5</span>
+            Network Tools
+        </h2>
+
+        <p>
+            Toolbox Super menyediakan berbagai alat diagnostik jaringan
+            seperti network scanner, port scanner, ping, DNS lookup, dan
+            alat jaringan lainnya.
+        </p>
+
+        <p>
+            Untuk menjalankan fitur tersebut, aplikasi dapat memproses alamat
+            IP, hostname, port, informasi perangkat jaringan, dan informasi
+            teknis lainnya.
+        </p>
+
+        <p>
+            Informasi tersebut digunakan untuk menjalankan fungsi yang diminta
+            pengguna.
+        </p>
+
+        <p>
+            Pengguna bertanggung jawab untuk menggunakan Network Tools hanya
+            pada perangkat, sistem, atau jaringan yang dimiliki atau yang
+            telah memberikan izin untuk diperiksa.
+        </p>
+    </section>
+
+
+    <section class="section" id="penggunaan">
+        <h2>
+            <span class="number">6</span>
+            Penggunaan Informasi
+        </h2>
+
+        <p>
+            Informasi yang diproses atau dikumpulkan dapat digunakan untuk:
+        </p>
+
+        <ul>
+            <li>Menyediakan fungsi aplikasi.</li>
+            <li>Menyimpan dan mengelola akun pengguna.</li>
+            <li>Menjalankan Toolbox Drive.</li>
+            <li>Menyimpan preferensi aplikasi.</li>
+            <li>Memperbaiki bug dan meningkatkan performa.</li>
+            <li>Menjaga keamanan layanan.</li>
+            <li>Mencegah penyalahgunaan.</li>
+            <li>Memberikan dukungan kepada pengguna.</li>
+            <li>Memenuhi kewajiban hukum yang berlaku.</li>
+        </ul>
+    </section>
+
+
+    <section class="section" id="berbagi">
+        <h2>
+            <span class="number">7</span>
+            Berbagi Data
+        </h2>
+
+        <p>
+            <strong>Toolbox Super tidak menjual informasi pribadi pengguna.</strong>
+        </p>
+
+        <p>
+            Data tertentu dapat diproses oleh penyedia layanan pihak ketiga
+            yang diperlukan untuk menjalankan aplikasi, misalnya:
+        </p>
+
+        <ul>
+            <li>Penyedia hosting atau cloud storage.</li>
+            <li>Sistem autentikasi.</li>
+            <li>Layanan analitik dan crash reporting.</li>
+            <li>Infrastruktur jaringan.</li>
+            <li>
+                Layanan lain yang secara jelas digunakan oleh fitur tertentu.
+            </li>
+        </ul>
+
+        <p>
+            Penggunaan layanan pihak ketiga dapat tunduk pada kebijakan
+            privasi masing-masing penyedia.
+        </p>
+    </section>
+
+
+    <section class="section" id="keamanan">
+        <h2>
+            <span class="number">8</span>
+            Keamanan Data
+        </h2>
+
+        <p>
+            Kami berupaya menggunakan langkah teknis dan organisasi yang
+            wajar untuk melindungi data pengguna.
+        </p>
+
+        <p>
+            Namun, tidak ada sistem elektronik, jaringan, atau penyimpanan
+            online yang dapat dijamin 100% aman.
+        </p>
+
+        <p>
+            Pengguna juga bertanggung jawab menjaga keamanan perangkat dan
+            informasi akun miliknya.
+        </p>
+    </section>
+
+
+    <section class="section" id="penyimpanan">
+        <h2>
+            <span class="number">9</span>
+            Penyimpanan dan Penghapusan Data
+        </h2>
+
+        <p>
+            Data disimpan selama diperlukan untuk menyediakan layanan atau
+            memenuhi kewajiban yang berlaku.
+        </p>
+
+        <p>
+            Jika fitur akun tersedia, pengguna dapat diberikan pilihan untuk
+            menghapus akun dan data terkait sesuai dengan fungsi yang tersedia
+            dan ketentuan yang berlaku.
+        </p>
+
+        <p>
+            File lokal yang dibuat menggunakan Toolbox Super tetap berada pada
+            perangkat atau lokasi penyimpanan yang dipilih pengguna sampai
+            pengguna menghapusnya.
+        </p>
+    </section>
+
+
+    <section class="section" id="anak">
+        <h2>
+            <span class="number">10</span>
+            Privasi Anak
+        </h2>
+
+        <p>
+            Toolbox Super tidak dimaksudkan untuk secara sengaja mengumpulkan
+            informasi pribadi anak di bawah usia minimum yang ditentukan oleh
+            hukum yang berlaku tanpa dasar atau persetujuan yang diperlukan.
+        </p>
+    </section>
+
+
+    <section class="section" id="pihak-ketiga">
+        <h2>
+            <span class="number">11</span>
+            Tautan dan Layanan Pihak Ketiga
+        </h2>
+
+        <p>
+            Toolbox Super dapat berinteraksi dengan situs web, server, API,
+            atau layanan pihak ketiga.
+        </p>
+
+        <p>
+            Kami tidak mengendalikan praktik privasi layanan pihak ketiga
+            tersebut.
+        </p>
+    </section>
+
+
+    <section class="section" id="perubahan">
+        <h2>
+            <span class="number">12</span>
+            Perubahan Kebijakan Privasi
+        </h2>
+
+        <p>
+            Kebijakan Privasi ini dapat diperbarui untuk menyesuaikan perubahan
+            fitur, teknologi, peraturan, atau layanan Toolbox Super.
+        </p>
+
+        <p>
+            Tanggal pembaruan terbaru akan ditampilkan pada bagian atas
+            kebijakan ini.
+        </p>
+    </section>
+
+
+    <section class="section contact" id="kontak">
+        <h2>
+            <span class="number">13</span>
+            Hubungi Kami
+        </h2>
+
+        <p>
+            Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi
+            Toolbox Super, silakan hubungi:
+        </p>
+
+        <div class="contact-box">
+
+            <div class="contact-row">
+                <span class="contact-label">Pengembang</span>
+                <strong>Rangga Adi Saputra</strong>
+            </div>
+
+            <div class="contact-row">
+                <span class="contact-label">Email</span>
+                <a href="mailto:admobtodan@gmail.com">
+                    admobtodan@gmail.com
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer>
+    <strong>Toolbox Super</strong><br>
+    © 2026 Toolbox Super. Semua hak dilindungi.
+</footer>
+
+</body>
+</html>
